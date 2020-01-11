@@ -9,3 +9,6 @@ Os atributos são:
 2) Situação (true/false)
 
 Esses atributos devem ser adicionados no FILTRO e mostrados no GRID(componente de listagem), como também no formulário de cadastro e edição.
+
+
+![Alt Text](https://github.com/elianoestevam/testedev-airton/blob/master/ivia.frontend/src/assets/img/grid.jpg)
