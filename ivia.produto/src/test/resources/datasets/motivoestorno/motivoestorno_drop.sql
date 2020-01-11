@@ -1,0 +1,1 @@
+TRUNCATE table producao.motivo_estorno cascade;

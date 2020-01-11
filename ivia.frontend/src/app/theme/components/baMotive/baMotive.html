@@ -1,0 +1,30 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">{{modalTitle}}</h4>
+        <button class="close" aria-label="Close" (click)="closeModal(null)">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">            
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="note">{{noteTitle}}</label>
+                    <input type="text" class="form-control" id="note" placeholder="" (keyup)="onKey($event.target.value)">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class="btn btn-primary btn-auth btn-with-icon" (click)="closeModal({result: true})">
+            <i class="ion-android-checkmark-circle"></i>{{labelButtonTrue}}</button>
+
+        <button class="btn btn-default btn-auth btn-with-icon" (click)="closeModal({result: false})">
+            <i class="ion-close-circled"></i>{{labelButtonFalse}}</button>
+    </div>
+
+    <span *ngIf="warning" style="text-align: center;" class="help-block sub-little-text">Confirmação Inválida!</span>
+</div>

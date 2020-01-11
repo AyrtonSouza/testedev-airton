@@ -1,0 +1,110 @@
+<div class="widgets">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-2">
+          <button type="button" *ngIf="filtrado" class="btn btn-default btn-with-icon form-control"
+            (click)="filtroVisivel = !filtroVisivel">
+            <i class="ion-funnel"></i>{{filtroVisivel ? 'Ocultar' : 'Mostrar'}} filtro</button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary btn-with-icon form-control" (click)="novaCor();">
+            <i class="ion-plus-round"></i>Novo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <ba-card *ngIf="filtroVisivel" title="Localizar" baCardClass="with-scroll">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input [(ngModel)]="corTO.nome" type="text" class="form-control" id="nome" placeholder=""
+                (keydown.enter)="recuperarCores($event);">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label>&nbsp;</label>
+              <button type="button" class="btn btn-primary btn-with-icon form-control"
+                (click)="recuperarCores($event);">
+                <i class="ion-android-search"></i>Localizar</button>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label>&nbsp;</label>
+              <button type="button" [disabled]="processando" class="btn btn-default btn-with-icon form-control"
+                (click)="limpar();">
+                <i class="ion-ios-refresh-outline"></i>Limpar</button>
+            </div>
+          </div>
+
+        </div>
+      </ba-card>
+    </div>
+
+    <div *ngIf="filtrado" class="col-md-12">
+      <ba-card titlePrincipal="Cores (Total de: {{totalElements}})" baCardClass="with-scroll"
+        class="data-table-container">
+        <div class="panel panel-default">
+          <table class="table table-striped" [mfData]="data | dataFilter : filterQuery" #mf="mfDataTable"
+            [mfRowsOnPage]="rowsOnPage">
+            <thead>
+              <tr>
+                <th  style="width: 1%">Código</th>
+                <th>Nome</th>
+                <th style="width: 3%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of mf.data">
+                <td>{{item.id}}</td>
+                <td>
+                  {{item.nome}}
+                </td>
+                <td>
+                  <ng-template #popContent>
+                    <button type="button" class="btn btn-primary btn-icon"
+                      ngbPopover="Editar" triggers="mouseenter:mouseleave" (click)="p.close(); abrirFormEdicao(item);">
+                      <i class="ion-edit"></i>
+                    </button>
+                  </ng-template>
+                  <button type="button" class="btn btn-primary btn-icon" #p="ngbPopover" placement="left"
+                    [ngbPopover]="popContent" popoverTitle="Ações:">
+                    <i class="ion-more"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr *ngIf="filtrado && mf.data.length == 0 && !processando">
+                <td colspan="3">
+                  Não foi possível encontrar registros com o filtro selecionado!
+                </td>
+              </tr>
+              <tr *ngIf="processando">
+                <td colspan="3">
+                  Localizando os registros, aguarde!
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="9">
+                  <p-paginator #p [rows]="pageSize" [totalRecords]="totalElements" [rowsPerPageOptions]="[5,10,15]"
+                    (onPageChange)="paginate($event)"></p-paginator>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </ba-card>
+    </div>
+
+  </div>
+</div>

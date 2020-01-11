@@ -1,0 +1,30 @@
+<div class="modal-content">
+  <!--
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalHeader}}</h4>
+    <button class="close" aria-label="Close" (click)="closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  -->
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-12">
+        <ba-card title="{{modalHeader}}" baCardClass="cardHome with-scroll">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea  class="form-control" id="mensagem" (change)="setValor($event)" placeholder="Digite a mensagem"></textarea>
+              </div>
+            </div>
+          </div>
+        </ba-card>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-auth btn-with-icon" (click)="cancelar()"><i class="ion-android-arrow-back"></i>Cancelar</button>
+    <button class="btn btn-primary btn-auth btn-with-icon" (click)="closeModal()"><i class="ion-paper-airplane"></i>{{titleButton}}</button>
+  </div>
+</div>

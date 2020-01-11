@@ -1,0 +1,83 @@
+@media screen and (min-width: 1620px) {
+  .row.shift-up {
+    > * {
+      margin-top: -573px;
+    }
+  }
+}
+
+@media screen and (max-width: 1620px) {
+  .card.feed-panel.large-card {
+    height: 824px;
+  }
+}
+
+.user-stats-card {
+  .card-title {
+    padding: 0 0 15px;
+  }
+}
+
+.blurCalendar {
+  height: 475px;
+}
+
+
+
+
+.form-control {
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  font-size: 14px;
+}
+
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+}
+
+.card > .card-body{
+  padding: 0!important;
+}
+
+.card-home{
+  min-height: 339px;
+}
+
+.card-body-inner{
+  padding: 10px 12px;
+  min-height: 134px;
+  text-align: justify;
+}
+
+.card-body-bnt{
+  padding: 10px 12px;
+}
+
+.text-primary {
+  color: #1F9E91 !important; }
+
+  .card-header-home{
+    padding: 14px 15px;
+  }
+
+
+
+  .column-in-center{
+    float: none;
+    margin: 0 auto;
+}
+
+
+  

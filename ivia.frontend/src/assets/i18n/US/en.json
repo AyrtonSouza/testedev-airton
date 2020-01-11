@@ -1,0 +1,27 @@
+{
+  "login": {
+    "entrar": "Entrar",
+    "esqueciasenha": "Esqueci a senha!"
+  },
+  "general": {
+    "home": "Home",
+    "forms": {
+      "camposobrigatorios": "todos os campos são obrigatórios"
+    },
+    "email": "Email",
+    "senha": "Senha",
+    "nome": "Nome",
+    "nomecompleto": "Nome completo",
+    "repetir": "Repetir",
+    "senhasnaocorrespondem": "As senhas não correspondem.",
+    "repetirsenha": "Repetir a senha",
+    "repetiremail": "Repetir o email",
+    "emailsnaocorrespondem": "Os emails não correspondem.",
+    "cpf": "CPF",
+    "telefone": "Telefone",
+    "cnpj": "CNPJ"
+  },
+  "menu": {
+    "dashboard": "Dashboard"
+  }
+}

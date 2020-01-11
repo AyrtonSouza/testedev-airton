@@ -1,0 +1,1 @@
+TRUNCATE table producao.materia_prima cascade;

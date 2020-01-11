@@ -1,0 +1,1 @@
+INSERT INTO producao.tipologia ( id, nome, situacao, sigla ) VALUES ( 1, 'ALIMENTOS E BEBIDAS', 0, 'ALB' );

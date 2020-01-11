@@ -1,0 +1,41 @@
+<div class="widgets">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row" style="margin-bottom: 10px;">
+          <div class="col-md-8">
+            <h1 _ngcontent-c3="" class="al-title" translate="" ng-reflect-translate="">{{acao}}</h1>
+          </div>
+          <div style="text-align: right;" class="col-md-2">
+            <button type="button" class="btn btn-default btn-with-icon form-control" (click)="voltar()">
+              <i class="ion-android-arrow-back"></i>Voltar</button>
+          </div>
+          <div class="col-md-2">
+            <button type="button" (click)="salvar()" class="btn btn-primary btn-auth btn-with-icon  form-control">
+              <i class="ion-edit"></i>Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-horizontal">
+            <ba-card baCardClass="with-scroll">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group" [ngClass]="{'has-error': ((submitted && !form.valid && !form.get('nome').valid) || (!form.get('nome').valid && form.get('nome').touched)), 'has-success': (form.get('nome').valid && form.get('nome').touched)}">
+                            <label for="nome">Nome
+                                <span class="text-danger">*</span>
+                            </label>
+                            <input [formControl]="form.get('nome')" [(ngModel)]="cor.nome" type="text" class="form-control"
+                            id="nome" placeholder="">
+                            <span *ngIf="(submitted && !form.valid && !form.get('nome').valid) || (!form.get('nome').valid && (form.get('nome').touched || form.get('nome').touched))"
+                            class="help-block sub-little-text">Informe o nome!</span>
+                        </div>
+                    </div>
+                </div>
+            </ba-card>
+        </form>
+        </div>
+    </div>
+    <ba-save-top (save)="salvar()"></ba-save-top>
+</div>

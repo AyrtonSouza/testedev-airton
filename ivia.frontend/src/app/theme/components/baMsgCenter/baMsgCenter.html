@@ -1,0 +1,75 @@
+<ul class="al-msg-center clearfix" style="margin-top: 21px;">
+  <li class="dropdown">
+    <a href class="dropdown-toggle" id="msg-dd1" data-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-bell-o"></i><span></span>
+
+      <div class="notification-ring"></div>
+    </a>
+
+    <div class="top-dropdown-menu dropdown-menu" aria-labelledby="msg-dd1">
+      <i class="dropdown-arr"></i>
+
+      <div class="header clearfix">
+        <strong>Notificações</strong>
+      </div>
+      <div class="msg-list">
+       
+      </div>
+    </div>
+  </li>
+  <!-- <li class="dropdown">
+    <a href class="msg dropdown-toggle" (click)="recuperarMensagens();" id="msg-dd2" data-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-commenting-o"></i><span>{{ chats.length }}</span>
+      <i class="fa fa-commenting-o"></i>
+      <div class="notification-ring"></div>
+    </a>
+    <div class="top-dropdown-menu dropdown-menu" aria-labelledby="msg-dd2">
+      <i class="dropdown-arr"></i>
+      <div class="header clearfix">
+        <strong>Mensagens pelo chat</strong>
+      </div>
+      <div class="msg-list">
+        <a *ngFor="let msg of chats" (click)="abrirChat(msg)" href="javascript:void(0);" class="clearfix">
+          <div class="img-area">
+            <div class="avatar-img avatar-corretor-p" [ngStyle]="{'cursor': 'pointer','background-image': 'url(' + dirImagens + 'uploads/perfil/' + msg.fotoperfilremetente + ')'}">
+            </div>
+            </div>
+          <div class="msg-area">
+            <div>por {{ msg.nomeremetente }}</div>
+            <div>{{ msg.msg }}</div>
+            <span>{{ msg.dataenvio | date: 'dd/MM/yyyy' }}</span>
+          </div>
+        </a>
+      </div>
+      <a href routerLink="/pages/mensagens/chat">Ver todos</a>
+    </div>
+  </li> -->
+  <!-- <li class="dropdown">
+    <a href class="msg dropdown-toggle" id="msg-dd2" data-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-envelope-o"></i><span>{{ mensagens.length }}</span>
+      <i class="fa fa-envelope-o"></i>
+      <div class="notification-ring"></div>
+    </a>
+    <div class="top-dropdown-menu dropdown-menu" aria-labelledby="msg-dd2">
+      <i class="dropdown-arr"></i>
+      <div class="header clearfix">
+        <strong>Mensagens por email</strong>
+      </div>
+      <div class="msg-list">
+        <a *ngFor="let msg of mensagens" href routerLink="/pages/mensagens/email" class="clearfix">
+          <div class="img-area">
+            <div class="avatar-img avatar-corretor-p" [ngStyle]="{'cursor': 'pointer','background-image': 'url(' + dirImagens + 'uploads/perfil/' + msg.fotoperfilremetente + ')'}">
+            </div>
+            </div>
+          <div class="msg-area">
+            <div>por {{ msg.nomeremetente }}</div>
+            <div>{{ msg.msg }}</div>
+            <span>{{ msg.dataenvio | date: 'dd/MM/yyyy' }}</span>
+          </div>
+        </a>
+      </div>
+      <a href routerLink="/pages/mensagens/email">Ver todos</a>
+    </div>
+  </li> -->
+
+</ul>

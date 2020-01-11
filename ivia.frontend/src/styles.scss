@@ -1,0 +1,91 @@
+/*
+.al-sidebar-sublist > ba-menu-item > li a {
+    padding-left: 35px !important;
+}
+.al-sidebar-home {
+    width: 180px;
+    top: 66px;
+    left: 0;
+    z-index: 800  !important;
+    display: block;
+    min-height: 100%;
+    background-color: rgba(83, 52, 25,0.7) !important;
+    height: 100%;
+    position: fixed;
+}
+.page-top {    
+    background-color: rgba(83, 52, 25,0.7) !important;
+}
+.page-top-home {    
+    background-color: rgba(83, 52, 25,0.7) !important;
+    position: fixed;
+    z-index: 1000  !important;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5) !important;
+    height: 66px;
+    width: 100%;
+    min-width: 320px;
+    padding: 0 32px 0 40px;
+}
+*/
+button.btn{ padding: 0.7em; }
+button.btn.btn-default{ border-color: #a7a7a7; }
+.form-control{ border-color: #a7a7a7; }
+.al-sidebar-list-item.selected:not(.with-sub-menu) {
+    background-color: #AA0605 !important; 
+}
+.al-sidebar {
+    /* background-color: rgba(83, 52, 25,0.7) !important; */
+    background-color: #1B2325 !important; 
+}
+.logotipo-img {
+    //width: 163px;
+    //height: 40px;
+    width: 184px;
+    height: 46px;    
+    background-size: cover;
+    background-position: center;
+    margin-top: 11px;
+}
+button.btn.btn-primary { color: #fff; }
+  .avatar-img {
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.page-top {
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 1)  !important;
+}
+.help-block { color: red; }
+.al-sidebar-sublist > ba-menu-item > li a{
+    padding-left: 33px !important;
+}
+.ba-sidebar-sublist-item > a.al-sidebar-list-link i{
+    margin-right: 10px !important;
+}
+.body-custom{
+	min-height: 158px !important;
+}
+.hr-custom{
+	margin-top: 0.5rem !important;
+}
+.label-detalhe{
+	font-weight: bold;
+}
+.div-col-custom{
+	margin-bottom: 2%;
+}
+.table th, .table td{
+    padding: 0.4em !important;
+}
+/*Modal*/ 
+  .modal-header .modal-title{
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    margin-right: 4px;
+    color: #767575; 
+  }
+  .modal-content .modal-body{
+    color: #848484;
+  }

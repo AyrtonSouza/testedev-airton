@@ -1,0 +1,30 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalHeader}}</h4>
+    <button class="close" aria-label="Close" (click)="closeModal(null)">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div *ngIf="modalMessage1" class="col-md-12" style="margin-bottom: 5%;">
+        {{modalMessage1}}
+      </div>
+
+      <div *ngIf="modalMessage3" class="col-md-12" style="margin-bottom: 5%;">
+        {{modalMessage3}}
+      </div>
+
+      <div *ngIf="modalMessage2" class="col-md-12">
+        {{modalMessage2}}
+      </div>      
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-auth btn-with-icon" (click)="closeModal({result: true})">
+      <i class="ion-android-checkmark-circle"></i>{{labelButtonTrue}}</button>
+
+    <button class="btn btn-default btn-auth btn-with-icon" (click)="closeModal({result: false})">
+      <i class="ion-close-circled"></i>{{labelButtonFalse}}</button>
+  </div>
+</div>

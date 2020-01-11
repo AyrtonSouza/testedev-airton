@@ -1,0 +1,25 @@
+<div style="padding: 0 20px 0 5px !important;" class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}">
+
+  <a routerLink="/pages/dashboard" class="al-logo clearfix">
+    <div class="logotipo-img" [ngStyle]="{'background-image': 'url(assets/img/logo_p.verde.fw.png)'}">
+    </div>
+  </a>
+     
+  <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+
+  <div class="user-profile clearfix">
+    <div class="dropdown al-user-profile">
+      <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+        <div class="avatar-img" [ngStyle]="{'background-image': 'url(' + profile.picture1 + ')'}">
+        </div>
+      </a>
+      <ul style="width: auto;" class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+        <li class="dropdown-item"><a href routerLink="/pages/meuperfil"></a></li>
+        <li class="dropdown-item"><a href routerLink="/pages/meuperfil"><i class="fa fa-user"></i>Meu perfil</a></li>
+        <li class="dropdown-item"><a href class="signout" (click)="logout()"><i class="fa fa-power-off"></i>Sair</a></li>
+      </ul>
+    </div>
+  </div>
+      <ba-msg-center></ba-msg-center>
+</div>
