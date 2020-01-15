@@ -33,8 +33,10 @@ SET default_with_oids = false;
 --
 
 CREATE TABLE producao.cor (
-    id integer NOT NULL,
-    nome character varying(50) NOT NULL
+   id integer NOT NULL,
+   nome character varying(50) NOT NULL,
+   data_de_cadastro date NOT NULL default current_date,
+   situacao bool NOT NULL default false
 );
 
 
@@ -45,7 +47,6 @@ ALTER TABLE producao.cor OWNER TO postgres;
 --
 
 CREATE SEQUENCE producao.cor_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
