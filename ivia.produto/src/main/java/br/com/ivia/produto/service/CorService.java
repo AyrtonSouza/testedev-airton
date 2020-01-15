@@ -23,12 +23,15 @@ import br.com.ivia.produto.util.specification.CorSpecification;
 @Service
 public class CorService {
 
-	@Autowired
-	private CorRepository repository;
+	private final CorRepository repository;
 	
-	@Autowired
-	private Message message;
-	
+	private final Message message;
+
+	public CorService(CorRepository repository, Message message) {
+		this.repository = repository;
+		this.message = message;
+	}
+
 	public List<Cor> findAll() {
 		List<Cor> list = Lists.newArrayList(repository.findAll());
 		if (list == null || list.isEmpty()) {

@@ -1,20 +1,25 @@
 package br.com.ivia.produto.to;
 
-import java.io.Serializable;
-
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 import org.springframework.data.domain.Sort.Direction;
 
-import lombok.Getter;
-import lombok.Setter;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.io.Serializable;
+import java.util.Date;
 
-@Getter
-@Setter
+@Data
 public class CorTO implements Serializable{
 	
 	private static final long serialVersionUID = 736300081709594291L;
 	
 	private String nome;	
-	private Integer id;	
+	private Integer id;
+
+	@Temporal(TemporalType.DATE)
+	private Date data_de_cadastro;
+	private Boolean situacao;
 
 	private Integer pageNumber;
 	private Integer pageSize;
