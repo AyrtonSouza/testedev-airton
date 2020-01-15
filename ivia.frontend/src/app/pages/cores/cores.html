@@ -21,12 +21,26 @@
     <div class="col-md-12">
       <ba-card *ngIf="filtroVisivel" title="Localizar" baCardClass="with-scroll">
         <div class="row">
-
-          <div class="col-md-4">
+          <div class="col-md-3">
             <div class="form-group">
               <label for="nome">Nome</label>
               <input [(ngModel)]="corTO.nome" type="text" class="form-control" id="nome" placeholder=""
                 (keydown.enter)="recuperarCores($event);">
+
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="dataDeCadastro">Data de Cadastro</label>
+              <input [(ngModel)]="corTO.data_de_cadastro" type="date" class="form-control" id="dataDeCadastro" placeholder="dd-MM-yyyy"
+                     (keydown.enter)="recuperarCores($event);" min="2020-01-01" max="2020-20-20">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="situacao">Situação</label>
+              <input [(ngModel)]="corTO.situacao" type="checkbox" class="form-control" id="situacao" placeholder=""
+                     (keydown.enter)="recuperarCores($event);">
             </div>
           </div>
           <div class="col-md-2">
@@ -45,7 +59,6 @@
                 <i class="ion-ios-refresh-outline"></i>Limpar</button>
             </div>
           </div>
-
         </div>
       </ba-card>
     </div>
@@ -60,7 +73,9 @@
               <tr>
                 <th  style="width: 1%">Código</th>
                 <th>Nome</th>
-                <th style="width: 3%"></th>
+                <th>Data do Cadastro</th>
+                <th>Situação</th>
+                <th style="width: 3%">Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -68,6 +83,15 @@
                 <td>{{item.id}}</td>
                 <td>
                   {{item.nome}}
+                </td>
+                <td>
+                  {{item.data_de_cadastro}}
+                </td>
+                <td *ngIf="!item.situacao">
+                  Inativo
+                </td>
+                <td *ngIf="item.situacao">
+                  Ativo
                 </td>
                 <td>
                   <ng-template #popContent>

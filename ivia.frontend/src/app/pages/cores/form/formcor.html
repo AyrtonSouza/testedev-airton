@@ -28,8 +28,26 @@
                             </label>
                             <input [formControl]="form.get('nome')" [(ngModel)]="cor.nome" type="text" class="form-control"
                             id="nome" placeholder="">
-                            <span *ngIf="(submitted && !form.valid && !form.get('nome').valid) || (!form.get('nome').valid && (form.get('nome').touched || form.get('nome').touched))"
+                          <span *ngIf="(submitted && !form.valid && !form.get('nome').valid) || (!form.get('nome').valid && (form.get('nome').touched || form.get('nome').touched))"
                             class="help-block sub-little-text">Informe o nome!</span>
+                          <div class="form-group" [ngClass]="{'has-error': ((submitted && !form.valid && !form.get('data_de_cadastro').valid) || (!form.get('data_de_cadastro').valid && form.get('data_de_cadastro').touched)), 'has-success': (form.get('data_de_cadastro').valid && form.get('data_de_cadastro').touched)}">
+                          <label for="dataCadastro">Data de Cadastro
+                            <span class="text-danger">*</span>
+                          </label>
+                          <input [formControl]="form.get('data_de_cadastro')" [(ngModel)]="cor.data_de_cadastro" type="date" class="form-control"
+                                 id="dataCadastro" placeholder="dd-MM-yyyy" min="2020-01-01" max="2020-20-20">
+                          <span *ngIf="(submitted && !form.valid && !form.get('data_de_cadastro').valid) || (!form.get('data_de_cadastro').valid && (form.get('data_de_cadastro').touched || form.get('data_de_cadastro').touched))"
+                                class="help-block sub-little-text">Informe a Data!</span>
+                          </div>
+                          <div class="form-group" [ngClass]="{'has-error': ((submitted && !form.valid && !form.get('situacao').valid) || (!form.get('situacao').valid && form.get('situacao').touched)), 'has-success': (form.get('situacao').valid && form.get('situacao').touched)}">
+                          <label for="situacao">Situação
+                            <span class="text-danger">*</span>
+                          </label>
+                          <input [formControl]="form.get('situacao')" [(ngModel)]="cor.situacao" type="checkbox" class="form-control"
+                                 id="situacao">
+                          <span *ngIf="(submitted && !form.valid && !form.get('situacao').valid) || (!form.get('situacao').valid && (form.get('situacao').touched || form.get('situacao').touched))"
+                                class="help-block sub-little-text">Situação esta inativo</span>
+                          </div>
                         </div>
                     </div>
                 </div>

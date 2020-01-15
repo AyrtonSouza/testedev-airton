@@ -1,5 +1,7 @@
 export class CorTO {
-    name: string;
+    nome: string;
+    data_de_cadastro: string;
+    situacao: boolean;
 
     pageNumber: number;
     pageSize: number;
