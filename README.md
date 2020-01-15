@@ -1,3 +1,9 @@
+#Conclusão
+Obrigado pela oportunidade, aprendi muito com esse projeto, principalmente na parte do angular,
+notei que tenho muito que aprender no angular, e mesmo que não me classifique para a vaga, deste ja eu agradeco, espero que o projeto continue indo bem.
+
+Fico no aguardo do feedback.
+
 # testedev-airton
 Repositório para o projeto de teste de desenvolvimento.
 
